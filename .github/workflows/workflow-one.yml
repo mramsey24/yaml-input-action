@@ -17,3 +17,7 @@ jobs:
     steps:
     - name: Hello
       run: echo "Hello There!"
+      
+    - name: Print inputs
+      run: |
+        echo "${{ inputs.my_name }}"
