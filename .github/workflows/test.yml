@@ -15,3 +15,7 @@ jobs:
       uses: ./
       with:
         yaml-file: 'sample-input.yml'
+
+    - name: Print ENV context
+      run: |
+        echo "${{toJSON(env)}}"
