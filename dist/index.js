@@ -6869,6 +6869,7 @@ async function run() {
         core.info("yamlPath=" + yamlPath);
         const yamlContent = yaml.load(fs.readFileSync(yamlPath, 'utf8'));
         for (const key in yamlContent) {
+            core.info("Key:" + key);
             if (Object.prototype.hasOwnProperty.call(yamlContent, key)) {
                 const element = yamlContent[key];
                 core.setOutput(key, element);
