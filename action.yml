@@ -1,0 +1,9 @@
+name: 'YAML input action'
+description: 'Process YAML and turn values into inputs'
+inputs:
+  yaml-file:
+    description: 'Path to the YAML file'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

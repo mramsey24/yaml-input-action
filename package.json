@@ -1,0 +1,24 @@
+{
+  "name": "yaml-input-action",
+  "version": "1.0.0",
+  "description": "Create inputs from yaml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.ts -o dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@types/node": "^20.4.9",
+    "js-yaml": "^4.1.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@vercel/ncc": "^0.36.1"
+  }
+}
