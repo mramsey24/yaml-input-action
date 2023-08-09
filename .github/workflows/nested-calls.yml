@@ -20,7 +20,7 @@ on:
 
 jobs:
   first-workflow:
-    uses: ./.github/workflows/first-workflow.yml
+    uses: ./.github/workflows/workflow-one.yml
     with:
       my_name: "Mark"
       my_home: "Moon"
