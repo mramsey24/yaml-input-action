@@ -5,8 +5,9 @@ import * as yaml from 'js-yaml';
 
 async function run() {
   try {
+    core.info("Run function called")
     const yamlPath: string = core.getInput('yaml-file', { required: true });
-
+    core.info("yamlPath=" + yamlPath)
     const yamlContent: any = yaml.load(fs.readFileSync(yamlPath, 'utf8'));
 
     for (const key in yamlContent) {

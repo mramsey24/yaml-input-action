@@ -6864,7 +6864,9 @@ const fs = __importStar(__nccwpck_require__(7147));
 const yaml = __importStar(__nccwpck_require__(1917));
 async function run() {
     try {
+        core.info("Run function called");
         const yamlPath = core.getInput('yaml-file', { required: true });
+        core.info("yamlPath=" + yamlPath);
         const yamlContent = yaml.load(fs.readFileSync(yamlPath, 'utf8'));
         for (const key in yamlContent) {
             if (Object.prototype.hasOwnProperty.call(yamlContent, key)) {
