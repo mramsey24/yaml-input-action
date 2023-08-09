@@ -29,6 +29,9 @@ jobs:
     - name: Print as Output
       run: echo "${{ steps.yaml-input.outputs.repo_name }}"
 
+    outputs:
+      my_repo_name: ${{ steps.yaml-input.outputs.repo_name }}
+
   second-job:
     runs-on: ubuntu-latest
     needs: run-yaml-input
@@ -36,4 +39,4 @@ jobs:
     steps:
       - name: Get Env Vars
         id: get-env-vars
-        run: echo ${{ needs.run-yaml-input.outputs.repo_name }}
+        run: echo ${{ needs.run-yaml-input.outputs.my_repo_name }}
