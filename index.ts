@@ -15,6 +15,7 @@ async function run() {
       if (Object.prototype.hasOwnProperty.call(yamlContent, key)) {
         const element = yamlContent[key];
         core.setOutput(key, element);
+        core.exportVariable(key,element )
       }
     }
 
