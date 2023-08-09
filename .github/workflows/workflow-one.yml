@@ -1,0 +1,19 @@
+name: Workflow One
+
+on:
+  workflow_call:
+    inputs:
+      my_name:
+        required: true
+        type: string
+      my_home:
+        required: true
+        type: string
+
+jobs:
+  run-yaml-input:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hello
+      run: echo "Hello There!"
