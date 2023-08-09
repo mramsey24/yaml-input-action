@@ -2,6 +2,9 @@ name: Test YAML Input
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+    - main
 
 jobs:
   run-yaml-input:
