@@ -28,3 +28,12 @@ jobs:
 
     - name: Print as Output
       run: echo "${{ steps.yaml-input.outputs.repo_name }}"
+
+  second-job:
+    runs-on: ubuntu-latest
+    needs: run-yaml-input
+
+    steps:
+      - name: Get Env Vars
+        id: get-env-vars
+        run: echo ${{ needs.run-yaml-input.outputs.repo_name }}
