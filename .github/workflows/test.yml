@@ -14,4 +14,4 @@ jobs:
     - name: Use my action
       uses: ./
       with:
-        yaml-file: 'yourfile.yml'
+        yaml-file: 'sample-input.yml'
