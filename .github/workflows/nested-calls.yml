@@ -1,0 +1,26 @@
+name: Nested Calls
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+  
+
+
+jobs:
+  first-workflow:
+    uses: ./.github/workflows/first-workflow.yml
+    with:
+      my_name: "Mark"
+      my_home: "Moon"
