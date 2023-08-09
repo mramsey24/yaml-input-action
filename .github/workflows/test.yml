@@ -44,6 +44,11 @@ jobs:
     - name: Print as Output
       run: echo "${{ steps.yaml-input.outputs.repo_name }}"
 
+    - name: Print runner evn
+      run: |
+        echo "ENV VARS..."
+        env
+        
     outputs:
       my_repo_name: ${{ steps.yaml-input.outputs.repo_name }}
 
@@ -55,3 +60,9 @@ jobs:
       - name: Get Env Vars
         id: get-env-vars
         run: echo ${{ needs.run-yaml-input.outputs.my_repo_name }}
+      - name: Print runner evn
+        run: |
+          echo "ENV VARS..."
+          env
+      
+      
